@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/gray"
+    >
+
+    <TextView
+        android:id="@+id/league"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:text="La Liga"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeTeam"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        app:srcCompat="@drawable/logo_barcelona"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/awayTeam"
+        app:layout_constraintTop_toBottomOf="@+id/league"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        />
+
+    <ImageView
+        android:id="@+id/awayTeam"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@drawable/logo_realmadrid"
+        app:layout_constraintStart_toEndOf="@+id/homeTeam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/league"
+        />
+
+    <TextView
+        android:id="@+id/txt_Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3 - 0"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/homeTeam"
+        app:layout_constraintEnd_toStartOf="@+id/awayTeam"
+        app:layout_constraintTop_toBottomOf="@+id/league" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
